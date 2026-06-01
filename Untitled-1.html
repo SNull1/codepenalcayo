@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Pénal - État Souverain de Cayo Perico</title>
+    <style>
+        :root {
+            --primary-color: #7a1f1d;
+            --secondary-color: #1c262f;
+            --accent-color: #d4af37;
+            --bg-color: #f4f6f7;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --border-color: #d1d5db;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(28, 38, 47, 0.9), rgba(28, 38, 47, 0.9)), center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .flag {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-style: italic;
+            color: #bdc3c7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .section-card.security { border-left-color: #c0392b; }
+        .section-card.authority { border-left-color: #2980b9; }
+        .section-card.civil { border-left-color: #27ae60; }
+        .section-card.traffic { border-left-color: #e67e22; }
+        .section-card.procedures { border-left-color: #8e44ad; }
+
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .article {
+            background: #fdfdfd;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .article-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .penalty {
+            margin-top: 8px;
+            display: inline-block;
+            background: #f1f2f6;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2c3e50;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #fff;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .alert-danger-zone {
+            background-color: #fadbd8;
+            border-left: 4px solid #cd6155;
+            color: #78281f;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="flag">🇨🇺</div>
+        <h1>Code Pénal de Cayo Perico</h1>
+        <p>Décret Gouvernemental n°84-A — Toute infraction aux lois de la République de Cayo Perico sera réprimée avec la plus grande fermeté par les Forces Armées et la Milice Nationale.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="nav-tabs">
+            <a href="#titre1" class="nav-btn">Titre I : Sécurité</a>
+            <a href="#titre2" class="nav-btn">Titre II : Autorité</a>
+            <a href="#titre3" class="nav-btn">Titre III : Personnes</a>
+            <a href="#titre4" class="nav-btn">Titre IV : Trafic</a>
+            <a href="#titre5" class="nav-btn">Titre V : Code Route</a>
+            <a href="#procedures" class="nav-btn">Procédures</a>
+        </div>
+
+        <div id="titre1" class="section-card security">
+            <h2>🛡️ Titre I : Infractions contre l'État et la Sécurité Nationale</h2>
+            <p style="margin-bottom: 15px; font-style: italic; color: #7f8c8d;">Les crimes de ce titre sont considérés comme de la Haute Trahison. Aucune amende n'est possible, seule la peine maximale s'applique.</p>
+            
+            <div class="article">
+                <div class="article-title">Art. 101 – Haute Trahison & Espionnage</div>
+                <p>Fait de transmettre des informations à une puissance étrangère ou de saboter les infrastructures gouvernementales (Antennes, base de données, docks).</p>
+                <div class="penalty">⚖️ Peine : Peine de mort (ou Fédérale à vie) + Saisie totale des biens.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 102 – Atteinte à la sûreté de l'État</div>
+                <p>Complot, tentative de coup d'État, ou création d'une milice armée non autorisée par le Gouvernement.</p>
+                <div class="penalty">⚖️ Peine : 90 à 120 minutes de prison.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 103 – Terrorisme & Insurrection</div>
+                <p>Attaque armée planifiée ou spontanée contre un bâtiment public, un convoi militaire ou un officiel du gouvernement.</p>
+                <div class="penalty">⚖️ Peine : 120 minutes de prison + Amende de $150,000.</div>
+            </div>
+        </div>
+
+        <div id="titre2" class="section-card authority">
+            <h2>👮 Titre II : Infractions contre les Forces de l'Ordre et l'Autorité</h2>
+            <p style="margin-bottom: 15px; font-style: italic; color: #7f8c8d;">Le respect de l'uniforme est la clé de voûte de notre société. Toute rébellion sera matée.</p>
+
+            <div class="article">
+                <div class="article-title">Art. 201 – Refus d'obtempérer aggravé</div>
+                <p>Fait de refus de s'arrêter aux checkpoints militaires ou lors d'une sommation des forces de l'ordre.</p>
+                <div class="penalty">⚖️ Peine : 20 à 40 minutes de prison + Amende de $25,000 + Saisie du véhicule.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 202 – Outrage à agent ou officiel</div>
+                <p>Insultes, gestes déplacés ou provocations envers un militaire, un garde ou un membre du gouvernement.</p>
+                <div class="penalty">⚖️ Peine : 15 minutes de prison + Amende de $10,000.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 203 – Homicide ou tentative d'homicide sur agent</div>
+                <p>Attaque directe et violente visant la vie d'un représentant de l'État.</p>
+                <div class="penalty">⚖️ Peine : 60 à 90 minutes de prison + Amende de $100,000.</div>
+            </div>
+        </div>
+
+        <div id="titre3" class="section-card civil">
+            <h2>👥 Titre III : Infractions contre les Personnes (Criminalité Civile)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Infraction</th>
+                        <th>Définition</th>
+                        <th>Peine de prison</th>
+                        <th>Amende</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--primary-color);">Art. 301 – Meurtre</td>
+                        <td>Homicide volontaire sur un civil.</td>
+                        <td>45 - 60 min</td>
+                        <td style="color: #c0392b; font-weight: bold;">$50,000</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--primary-color);">Art. 302 – Braquage</td>
+                        <td>Vol sous la menace d'une arme (supérette, banque, civil).</td>
+                        <td>30 - 45 min</td>
+                        <td style="color: #c0392b; font-weight: bold;">$30,000</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--primary-color);">Art. 303 – Enlèvement</td>
+                        <td>Séquestration d'un individu sans son consentement.</td>
+                        <td>40 - 60 min</td>
+                        <td style="color: #c0392b; font-weight: bold;">$40,000</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; color: var(--primary-color);">Art. 304 – Agression</td>
+                        <td>Violence physique gratuite sur autrui.</td>
+                        <td>15 - 20 min</td>
+                        <td style="color: #c0392b; font-weight: bold;">$15,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="titre4" class="section-card security">
+            <h2>📦 Titre IV : Trafic, Contrebande et Armement</h2>
+            <p style="margin-bottom: 15px; font-style: italic; color: #7f8c8d;">L'île est une plaque tournante, mais le gouvernement exige son monopole. Tout trafic non autorisé est sévèrement puni.</p>
+
+            <div class="article">
+                <div class="article-title">Art. 401 – Possession d'arme de guerre</div>
+                <p>Détention d'armes automatiques, d'explosifs ou d'équipement militaire (gilets pare-balles lourds) sans autorisation.</p>
+                <div class="penalty">⚖️ Peine : 30 minutes de prison + Saisie des armes + Amende de $50,000.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 402 – Trafic de stupéfiants</div>
+                <p>Production, transport ou vente de drogue (Cocaïne, Meth, Weed) sur le territoire.</p>
+                <div class="penalty">⚖️ Peine : 40 à 60 minutes de prison + Saisie de la marchandise + Amende de $80,000.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 403 – Contrebande maritime ou aérienne</div>
+                <p>Importation ou exportation illégale de marchandises par les côtes ou les pistes d'atterrissage sans passer par la douane.</p>
+                <div class="penalty">⚖️ Peine : 30 minutes de prison + Amende de $35,000 + Saisie du navire/aéronef.</div>
+            </div>
+        </div>
+
+        <div id="titre5" class="section-card traffic">
+            <h2>🚘 Titre V : Code de la Route et Espace Public</h2>
+
+            <div class="article">
+                <div class="article-title">Art. 501 – Intrusion en zone militaire</div>
+                <p>Pénétration non autorisée dans l'enceinte de la base principale, des complexes de stockage ou des résidences gouvernementales.</p>
+                <div class="alert-danger-zone">⚠️ Autorisation de tirer à vue si sommation ignorée.</div>
+                <div class="penalty" style="margin-top: 10px;">⚖️ Si arrêté vivant : 30 minutes de prison + Amende de $20,000.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 502 – Conduite dangereuse / Hors-piste non autorisé</div>
+                <p>Destruction de la faune ou conduite mettant en danger les patrouilles.</p>
+                <div class="penalty">⚖️ Peine : Amende de $5,000 + Mise en fourrière du véhicule.</div>
+            </div>
+
+            <div class="article">
+                <div class="article-title">Art. 503 – Violation du couvre-feu</div>
+                <p>Présence injustifiée dans les rues ou les jungles de l'île pendant les heures décrétées par le gouvernement.</p>
+                <div class="penalty">⚖️ Peine : 10 minutes de prison + Amende de $2,500.</div>
+            </div>
+        </div>
+
+        <div id="procedures" class="section-card procedures">
+            <h2>📝 Règles de Procédure (Militaires / Policiers)</h2>
+            <ol style="margin-left: 20px; padding-left: 5px;">
+                <li style="margin-bottom: 10px;"><strong>Fouille :</strong> La fouille est permanente et légale pour toute personne présente sur l'île, sans mandat requis.</li>
+                <li style="margin-bottom: 10px;"><strong>Cumul des peines :</strong> Les peines de prison et les amendes sont cumulables, mais la peine de prison maximale (hors trahison) ne peut excéder <strong>120 minutes</strong>.</li>
+                <li style="margin-bottom: 10px;"><strong>Droits du détenu :</strong> Le détenu a droit à un repas et de l'eau avant son incarcération. La présence d'un avocat est soumise à l'autorisation de l'officier supérieur présent.</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Gouvernement de Cayo Perico - Document Officiel RP</p>
+    </footer>
+
+</body>
+</html>
